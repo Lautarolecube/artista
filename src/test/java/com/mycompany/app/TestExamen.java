@@ -12,13 +12,13 @@ import java.util.List;
 public class TestExamen 
 {
 
-    /* 
+    
     Artista fito;
     Artista calamaro;
     Album amor;
     Album circo;
 
-    @BeforeEach
+    @Before
     void setUp() {
         fito = new Artista("Fito Páez", "Argentina");
         calamaro = new Artista("Andrés Calamaro", "Argentina");
@@ -31,13 +31,13 @@ public class TestExamen
         circo.agregar(new Tema("Mariposa Tecknicolor", 3.5, "Rock"));
     }
 
-     @Test
+    @Test
     void test01_HerenciaArtistaEsPersona() {
         assertTrue(fito instanceof Persona, "Artista debe heredar de Persona");
     }
 
     @Test
-    void test02_AgregarAlbumADiscografia() {
+    public void test02_AgregarAlbumADiscografia() {
         fito.agregar(amor);
         fito.agregar(circo);
         assertEquals(2, fito.getAlbums().size());
@@ -106,5 +106,4 @@ public class TestExamen
         assertEquals("Argentina", p.getNacionalidad());
     }
 
-    */
 }
