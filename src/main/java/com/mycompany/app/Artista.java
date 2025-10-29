@@ -1,5 +1,6 @@
 package com.mycompany.app;
 import java.util.ArrayList;
+import java.util.List;
 
 
 
@@ -9,6 +10,7 @@ public class Artista extends Persona{
     private String nacionalidad;
     private String titulo;
     private String genero;
+    private ArrayList<Album> albums;
 
 
     //Getters
@@ -25,9 +27,15 @@ public class Artista extends Persona{
     public String setGenero() { this.genero= genero;}
 
     //Constructor
+    public Artista(String nombre, String nacionalidad, String titulo, String genero){
+        this.nombre = nombre;
+        this.nacionalidad = nacionalidad;
+        this.titulo = titulo;
+        this.genero = genero;
+        this.albums = new ArrayList<Album>();
+    }
+
     Persona artista = new Persona();
-    
-    
 
     //Métodos
     
@@ -47,8 +55,8 @@ public class Artista extends Persona{
 
     void agregarAlbumAAlbums(String titulo, int anio, String genero, List temas, String artistainvitado, String tema, String nombre){
 
-    Album Albums = new Album(titulo, anio, genero, temas, nombre, tema, artistainvitado, tema, nombre);
-    Albums.add(Album);
+    Album albums = new Album(titulo, anio, genero, temas, nombre, tema, artistainvitado, tema, nombre);
+    albums.add(artista);
 
     }
 

@@ -1,26 +1,52 @@
 package com.mycompany.app;
-
 import java.util.ArrayList;
 
 public class Album {
 
-    public String titulo;
-    public int anio;
-    public List<Tema>temas;
-    private String artistainvitado;
-    public String tema;
+    private String titulo;
+    private String genero;
+    private int anio;
+    private ArrayList<Tema>temas;
+    private String cancion;
+    private String artistaInvitado;
 
-    void agregarTema(String titulo, int anio, String genero, List temas, String tema){
 
-    this.temas = new Album().temas[""].add(tema);
+    public Album(String titulo, int anio, ArrayList<Tema>temas, String cancion) {
+        this.titulo = titulo;
+        this.anio = anio;
+        this.temas = (temas != null) ? temas : new ArrayList<>();
+        this.cancion = cancion;
+    }
+
+    public Album(String titulo, String genero, int anio, ArrayList<Tema>temas, String cancion, String artistaInvitado) {
+        this.titulo = titulo;
+        this.genero = genero;
+        this.anio = anio;
+        this.temas = (temas != null) ? temas : new ArrayList<>();
+        this.cancion = cancion;
+        this.artistaInvitado = artistaInvitado;
+   }
+
+    void agregarTema(String titulo, String genero, int anio, ArrayList<Tema>temas, String cancion){
+
+    Tema nuevoTemaAlbum = new Tema(titulo, genero, anio, temas, cancion);
+    this.temas.add(nuevoTemaAlbum);
 
     }
 
-    void agregarTemaConArtistaInvitado(String titulo, int anio, String genero, List temas, String artistainvitado, String tema){
+    void agregarTemaConArtistaInvitado(String titulo, String genero, int anio, ArrayList<Tema>temas, String cancion, String artistaInvitado){
 
-    Tema nuevoTema = new Tema(genero, titulo, artistainvitado);
-    nuevoTema.add(tema);   
-
-
+    Tema nuevoTemaAlbum = new Tema(titulo, genero, anio, temas, cancion, artistaInvitado);
+    this.temas.add(nuevoTemaAlbum);   
     }
 
+    //Getters
+    public String getTitulo() { return titulo; }
+    public String getGenero() { return genero; }
+    public int getAnio() { return anio; }
+    public ArrayList<Tema> getTemas() { return temas; }
+    public String getCancion() { return cancion; }
+    public String getArtistaInvitado() { return artistaInvitado; }
+
+
+}
