@@ -1,11 +1,8 @@
 package com.mycompany.app;
 
+import org.junit.Before;
 import org.junit.Test;
-
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertThrows;
-import static org.junit.Assert.assertTrue;
-
+import static org.junit.Assert.*;
 import java.util.List;
 
 
@@ -19,7 +16,7 @@ public class TestExamen
     Album circo;
 
     @Before
-    void setUp() {
+    public void setUp() {
         fito = new Artista("Fito Páez", "Argentina");
         calamaro = new Artista("Andrés Calamaro", "Argentina");
 
@@ -32,7 +29,7 @@ public class TestExamen
     }
 
     @Test
-    void test01_HerenciaArtistaEsPersona() {
+    public void test01_HerenciaArtistaEsPersona() {
         assertTrue(fito instanceof Persona, "Artista debe heredar de Persona");
     }
 
@@ -45,7 +42,7 @@ public class TestExamen
     }
 
     @Test
-    void test03_BuscarAlbumPorParteDelNombre() {
+    public void test03_BuscarAlbumPorParteDelNombre() {
         fito.agregar(amor);
         fito.agregar(circo);
         List<Album> res = fito.buscarAlbum("amor");
@@ -54,7 +51,7 @@ public class TestExamen
     }
 
     @Test
-    void test04_AgregarTemaAAlbum() {
+    public void test04_AgregarTemaAAlbum() {
         Album nuevo = new Album("Nuevo", 2024);
         Tema t = new Tema("Canción", 3.1, "Pop");
         nuevo.agregar(t);

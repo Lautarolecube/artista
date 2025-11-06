@@ -1,5 +1,7 @@
 package com.mycompany.app;
 import java.util.ArrayList;
+import java.util.List;
+import java.util.LinkedList;
 
 
 
@@ -10,6 +12,11 @@ public class Tema {
     public ArrayList<Tema>temas;
     public int anio;
     public String artistaInvitado;
+
+    public Tema(){
+
+        
+    }
 
     //Getters
     public ArrayList<Tema> getTemas() {

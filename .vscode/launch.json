@@ -2,6 +2,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Artista",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.Artista",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
+            "name": "Persona",
+            "request": "launch",
+            "mainClass": "com.mycompany.app.Persona",
+            "projectName": "my-app"
+        },
+        {
+            "type": "java",
             "name": "Launch App",
             "request": "launch",
             "cwd": "${workspaceFolder}",
